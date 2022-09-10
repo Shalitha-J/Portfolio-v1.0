@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@400;500;700&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: black;
+    color: #fff;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.mx {
+    margin: 0 80px;
+}
+
+.grid {
+    display: grid;
+}
+
+
+.title-text {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid aqua;
+
+    h1 {
+        position: relative;
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #48ec53;
+
+        .bg-text-c {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: rgb(69, 67, 67);
+            font-size: 4rem;
+            z-index: -1;
+        }
+    }
+
+}
+
+.f-vh {
+    height: 100vh;
+}
+// nav bar styling
+
+nav {
+    background-color: #151212;
+
+    .nav-items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        
+
+        .menu-items {
+            display: flex;
+
+
+        }
+
+
+
+        .logo {
+
+
+            color: rgb(31, 27, 108);
+            font-size: 1.25rem;
+            font-weight: 700;
+            background-image: linear-gradient(to right, pink, rgb(213, 33, 156), blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+
+        }
+
+        ul {
+            display: flex;
+
+            li a {
+                color: #fff;
+                margin-left: 30px;
+            }
+        }
+
+        .hamburger {
+            margin-left: 60px;
+
+
+
+            span {
+                display: block;
+                width: 26px;
+                height: 2px;
+                background-image: linear-gradient(to right,  #ec4899, blue);
+                transition: all 300ms ease-in-out;
+                transform-origin: 3px 1px;
+
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+
+                
+            }
+
+
+            &.open {
+                > span:first-child {
+                    transform: rotate(45deg);
+                }
+                > span:nth-child(2) {
+                    opacity: 0;
+                }
+                > span:last-child {
+                    transform: rotate(-45deg);
+                }
+            }
+
+            
+
+            
+        }
+    }
+
+}
+
+
+// Hero section styling
+
+.hero-section {
+    position: relative;
+    height: 95vh;
+    background-image: url(../img/herobc.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    isolation: isolate;
+
+
+    .scroll-arrow {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: fadeBounce 3s infinite;
+    }
+
+
+
+    .intro {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        left: 40%;
+        top: 40%;
+        transform: translateY(-50%);
+        
+        
+       
+       
+    
+        .img-logo{
+            max-width: 200px;
+            margin-right: 50px;
+        }
+    
+        .introtext{
+            
+            h3 {
+                position: relative;
+                color: #fff;
+                margin-bottom: 1rem;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 5px;
+                    width: 80px;
+                    height: 2px;
+                    margin-left: 10px;
+                    background-color: aqua;
+                }
+            }
+
+            h1 {
+                font-size: 3rem;
+                color: #fff;
+                position: relative;
+                
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 150%;
+                    width: 1px;
+                    height: 150px;
+                    right: 50%;
+                    background-color: blueviolet;
+                }
+            }
+        }
+    
+    
+    }
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: #000;
+    opacity: .9;
+}
+
+
+
+
+// skills Section Styling
+.skill-section {
+
+    .main-text {
+        text-align: center;
+        padding-top: 4rem;
+        padding-bottom: 5px;
+        border-bottom: 1px solid aqua;
+
+        h1 {
+            position: relative;
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #48ec53;
+
+            .bg-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                color: rgb(69, 67, 67);
+                font-size: 4rem;
+                z-index: -1;
+            }
+        }
+    }
+
+    .img-boxes-container {
+        display: flex;
+        margin-top: 50px;
+        margin-bottom: 5rem;
+
+        .skillimg {
+           
+            max-width: 500px;
+            img{
+                border-radius: 5%;
+            }
+        }
+      
+        
+
+        .skill-box-container.grid  {
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 30px;
+            margin: auto;
+            .box {
+                width: 100px;
+                height: 150px;
+                border-radius: 5px;
+                box-shadow: 1px 2px 3px 1px rgb(131, 132, 132);
+                margin-left: 50px;
+                transition: transform 300ms ease-in-out;
+                 
+    
+                .img-logo {
+                    width: 100%;
+                    
+                    img {
+                        border-radius: 5px;
+                    }
+                }
+    
+                .name {
+                    text-align: center;
+                    margin-top: 8px;
+                    color: aqua;
+                }
+
+                &:hover {
+                    transform: translateY(-8px);
+                }
+            }
+
+            
+        }
+    }
+}
+
+
+
+
+
+
+// Animations 
+
+@keyframes fadeBounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        opacity: 0;
+        transform: translateY(-20px)
+    }
+
+    40% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
