@@ -1,7 +1,10 @@
 const menuBtn = document.querySelector('.hamburger');
+const slideBar = document.querySelector('.slider')
 
 
 
 menuBtn.addEventListener(('click'), function () {
-    menuBtn.classList.toggle('open');
+    slideBar.classList.toggle('open');
 })
+
+
