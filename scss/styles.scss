@@ -78,6 +78,70 @@ header {
     overflow: hidden;
 }
 
+
+// btn style
+
+.btn-con {
+    display: flex;
+    align-self: flex-start;
+   
+}
+.main-btn {
+    
+    border-radius: 30px;
+    color: inherit;
+    font-weight: 600;
+    position: relative;
+    border: 1px solid  #48ec53;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3 ease-out;
+
+    .btn-icon{
+        background-color: #48ec53;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 1rem;
+        margin-left: 30px;
+    }
+
+    .btn-text {
+        margin-left: 10px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        transition: all 0.4s ease-out;
+        z-index: -1;
+        
+    }
+
+    
+
+    
+}
+
+.main-btn:hover {
+    &::before {
+        width: 100%;
+        height: 100%;
+        transform: translateX(0);
+        background-color: #48ec53;
+    }
+}
+
+
+
+
+
 nav {
     background-color: #151212;
     position: relative;
@@ -716,6 +780,139 @@ footer {
 
 
 
+// contact page styling
+
+.contact-main {
+    position: relative;
+}
+
+.contact-me {
+    display: flex;
+    padding-top: 3rem;
+    margin: 3rem auto;
+    
+
+     .left-contact {
+        flex: 2;
+        align-items: center;
+
+
+        .email {
+            margin: 2rem 0 ;
+
+            p{
+                margin-top: 10px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: #48ec53;
+                }
+            }
+        }
+
+
+        .social {
+            margin: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            
+            a {
+                margin: 1rem 0;
+                color: #fff;
+                font-size: 1rem;
+                
+                i{
+                    color: rgb(235, 150, 225);
+                }
+
+                :hover {
+                    color: orange;
+                }
+            }
+        }
+        
+    }
+
+    .right-contact{
+       flex: 3;
+       margin-left: 3rem;
+
+
+       .input-control {
+        margin: 3rem 0;
+
+         input, textarea {
+            border-radius: 30px;
+            font-size: inherit;
+            font-family: inherit;
+            padding: .8rem 1.1rem;
+            outline: none;
+            border: none;
+            background-color: #1a1a34;
+            width: 100%;
+            color: #fff; 
+            resize: none;
+           }
+       }
+
+       .i-c-2 {
+           display: flex;
+
+           :last-child {
+            margin-left: 1.5rem;
+           }
+       }
+
+       .submit {
+           margin: 0;
+           padding: 0;
+           border: none;
+         .btn-main {
+            height: 50px;
+            width: 200px;
+            background-color: #48ec53;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+         
+         }
+         
+           .btn-main .sub-btn {
+            
+             background-color: rgb(1, 104, 1);
+             width: 100%;
+             height: 85%;
+             margin: auto;
+             display: flex;
+             flex-direction: column;
+             transition: all 0.3s ease-in-out;
+            
+             
+         }
+           .btn-main .sub-btn a {
+             color: #fff;
+             text-align: center;
+             text-transform: uppercase;
+             margin: auto;
+             font-weight: 900;
+         }
+         
+           .btn-main:hover .sub-btn {
+             height: 100%;
+             background-image: linear-gradient(#3d3938,#171615);
+         
+         }
+       }
+
+       
+    }
+}
+
+
+
+
+
+
 
 
 
@@ -743,6 +940,20 @@ footer {
 
 
 // @media styling / responsive coding----------------
+
+@media (max-width: 1000px) {
+    .contact-me .right-contact .i-c-2 {
+        flex-direction: column;
+
+        :last-child {
+            margin-left: 0;
+            margin-top: 20px;
+           }
+    }
+}
+
+
+
 
 @media (max-width: 900px) {
 
@@ -836,7 +1047,7 @@ footer {
     }
 
     .about-section .aboutme .text p {
-        font-size: 2rem;
+        font-size: 18px;
     }
 
     .text h1 {
@@ -847,10 +1058,34 @@ footer {
 }
 
 
+
+@media (max-width: 700px) {
+    .contact-me {
+         flex-direction: column;
+
+         .left-contact {
+            align-self: center;
+         }
+    }
+}
+
+
+
+
 @media (max-width: 680px) {
     .skill-section .img-boxes-container .skill-box-container.grid {
        display: none;
     }
+
+    .about-section .aboutme .text p {
+        font-size: 14px;
+    }
+
+    footer .social {
+        flex-wrap: wrap;
+    }
 }
+
+
 
 
