@@ -44,6 +44,7 @@ ul li {
 }
 
 
+
 .title-text {
     text-align: center;
     padding-top: 4rem;
@@ -70,9 +71,16 @@ ul li {
 
 }
 
+
+
+
 .f-vh {
     min-height: 100vh;
 }
+
+
+
+
 // nav bar styling
 header {
     overflow: hidden;
@@ -143,7 +151,7 @@ header {
 
 
 nav {
-    background-color: #151212;
+    background-color: #353030;
     position: relative;
     // overflow: hidden;
     
@@ -176,7 +184,10 @@ nav {
             &:hover {
                 color: aqua;
             }
+           
           }
+
+          
 
           
         }
@@ -217,6 +228,10 @@ nav {
                 &:hover {
                     color: aqua;
                 }
+
+                &.aqua-text {
+                    color: aqua;
+                }
             }
         }
 
@@ -241,6 +256,8 @@ nav {
             li a {
                 color: #fff;
                 margin-left: 30px;
+
+                
             }
         }
 
@@ -297,6 +314,8 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
     isolation: isolate;
+    
+    
 
 
     .scroll-arrow {
@@ -316,6 +335,7 @@ nav {
         left: 40%;
         top: 40%;
         transform: translateY(-50%);
+        animation: fadeUp 1s ease-in-out 1s;
         
         
        
@@ -384,9 +404,9 @@ nav {
          transition: all 0.3s ease;
 
 
-         #skills{
+        //  #skills{
             
-         }
+        //  }
 
 
     .main-text {
@@ -463,6 +483,10 @@ nav {
             }
 
             
+        }
+
+        .hide-in-desktop {
+            display: none;
         }
     }
 }
@@ -792,6 +816,7 @@ footer {
 
 .contact-main {
     position: relative;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .contact-me {
@@ -946,6 +971,28 @@ footer {
 
 }
 
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+   
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+   0% {
+         opacity: 0;
+
+   } 
+   100% {
+    opacity: 1;
+   }
+}
+
 
 // @media styling / responsive coding----------------
 
@@ -1085,6 +1132,59 @@ footer {
        display: none;
     }
 
+    .skill-section .img-boxes-container {
+        .hide-in-desktop {
+            height: 20px;
+            display: block;
+            justify-content: center;
+            margin-bottom: 200px;
+            padding-bottom: 50px;
+            
+            
+
+            ul {
+                
+
+
+
+                li {
+                    height: 80%;
+                    padding: 10px;
+                    margin-top: 10px;
+
+                    span {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+
+                    .html {
+                        color: rgb(250, 141, 69);
+                    }
+                    .css {
+                        color: #48ec53;
+                    }
+                    .js {
+                        color: aqua;
+                    }
+                    .json {
+                        color: rgb(44, 102, 152);
+                    }
+                    .sass {
+                        color: rgb(255, 135, 199);
+                    }
+                    .git {
+                        color: bisque;
+                    }
+                    .github {
+                        color: aquamarine;
+                    }
+                }
+                
+            }
+        }
+    }
+    
+
     .about-section .aboutme .text p {
         font-size: 14px;
     }
@@ -1092,6 +1192,19 @@ footer {
     footer .social {
         flex-wrap: wrap;
     }
+
+
+    .skill-section .main-text h1 .bg-text {
+       
+        font-size: 2.5rem;
+    }
+    .title-text h1 .bg-text-c {
+
+        font-size: 2.5rem;
+
+    }
+
+
 }
 
 
