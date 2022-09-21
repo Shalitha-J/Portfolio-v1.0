@@ -309,7 +309,7 @@ nav {
 .hero-section {
     position: relative;
     height: 95vh;
-    background-image: url(../img/herobc1.jpg);
+    background-image: url(../img/herobc2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -333,9 +333,9 @@ nav {
         display: flex;
         align-items: center;
         left: 40%;
-        top: 40%;
+        top: 30%;
         transform: translateY(-50%);
-        animation: fadeUp 1s ease-in-out 1s;
+        animation: fadeUp 1s ease-in-out 1s both;
         
         
        
@@ -974,7 +974,7 @@ footer {
 @keyframes fadeUp {
     0% {
         opacity: 0;
-        transform: translateY(100%);
+        transform: translateY(100px);
     }
    
     100% {
